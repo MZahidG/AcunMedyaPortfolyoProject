@@ -12,6 +12,7 @@
 
 
 <h2>Kullanılan Teknolojiler</h2>
+
 🔹 ASP.NET MVC – Model-View-Controller mimarisi
 
 🔹 Entity Framework (DB First) – ORM tabanlı veritabanı yönetimi
