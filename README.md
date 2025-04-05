@@ -1,4 +1,4 @@
-<h2> Öne Çıkan Özellikler <h2/>
+<h2>Öne Çıkan Özellikler</h2>
   
 ✅ CRUD İşlemleri – Verilerin eklenmesi, güncellenmesi, silinmesi ve listelenmesi
 
