@@ -1,0 +1,36 @@
+﻿﻿@model AcunMedyaPortfolioProject.Models.Tbl_About
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Hakkımda Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.AboutID)
+    <label>Görsel</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" }) <br />
+    <label>Ünvan</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" }) <br />
+    <label>Doğum Tarihi</label>
+    @Html.TextBoxFor(x => x.Birthday, new { @class = "form-control" }) <br />
+    <label>Web Sitesi</label>
+    @Html.TextBoxFor(x => x.WebSite, new { @class = "form-control" }) <br />
+    <label>Telefon No</label>
+    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" }) <br />
+    <label>Şehir</label>
+    @Html.TextBoxFor(x => x.City, new { @class = "form-control" }) <br />
+    <label>Yaş</label>
+    @Html.TextBoxFor(x => x.Age, new { @class = "form-control" }) <br />
+    <label>Email</label>
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" }) <br />
+    <label>FreeLance</label>
+    @Html.TextBoxFor(x => x.Freelance, new { @class = "form-control" }) <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description1, new { @class = "form-control" }) <br />
+    <label>Açıklama-2</label>
+    @Html.TextBoxFor(x => x.Description2, new { @class = "form-control" }) <br />
+    <label>Derece</label>
+    @Html.TextBoxFor(x => x.Degree, new { @class = "form-control" }) <br />
+    <button class="btn btn-success">Güncelle</button>
+</form>

@@ -1,0 +1,18 @@
+﻿﻿@model AcunMedyaPortfolioProject.Models.Tbl_Slider
+@{
+    ViewBag.Title = "UpdateSlider";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Profil Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.SelectID)
+    <label>Ad - Soyad</label>
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" }) <br />
+    <label>Ünvan</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" }) <br />
+    <label>Görsel</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" }) <br />
+    <button class="btn btn-success">Güncelle</button>
+</form>

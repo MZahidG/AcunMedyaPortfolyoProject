@@ -1,0 +1,63 @@
+﻿<div class="col-lg-8">
+    <form action="@Url.Action("PartialMessage", "Default")" method="post" data-aos="fade-up" data-aos-delay="200">
+        <div class="row gy-4">
+
+            <div class="col-md-6">
+                <input type="text" name="NameSurname" class="form-control" placeholder="Adınız" required="">
+            </div>
+
+            <div class="col-md-6">
+                <input type="email" class="form-control" name="Mail" placeholder="Email" required="">
+            </div>
+
+            <div class="col-md-12">
+                <input type="text" class="form-control" name="Subject" placeholder="Konu" required="">
+            </div>
+
+            <div class="col-md-12">
+                <textarea class="form-control" name="MessageContent" rows="6" placeholder="Mesaj" required=""></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-custom" id="message">Mesajı Gönder</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<style>
+    /* Buton rengi, yazı rengi ve boyutlandırma */
+    .btn-custom {
+        background-color: #8000FF;
+        border-color: #8000FF;
+        color: white; /* Buton yazı rengi beyaz */
+        font-size: 18px; /* Buton yazı boyutu */
+        padding: 15px 30px; /* Butonun üst-alt ve sağ-sol boşlukları */
+        border-radius: 30px; /* Butonun köşeleri oval */
+        transition: background-color 0.3s ease; /* Hover efekti geçişi */
+    }
+
+        .btn-custom:hover {
+            background-color: #7a00e6; /* Hover durumu, rengi biraz solacak */
+            border-color: #7a00e6;
+        }
+
+    /* Olumlu ve olumsuz bildirim stilleri */
+    .alert {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+    }
+
+    .alert-danger {
+        background-color: #f8d7da;
+        color: #721c24;
+    }
+</style>

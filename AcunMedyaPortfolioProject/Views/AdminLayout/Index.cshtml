@@ -1,0 +1,54 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+@Html.Action("PartialHead", "AdminLayout")
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar" class="active">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Menüyü Değiştir</span>
+                </button>
+            </div>
+            <div class="p-4">
+                <h1><a href="~/Statistic/" class="logo">Admin</a></h1>
+               @Html.Action("PartialMenu","AdminLayout")
+
+                <div class="mb-5">
+                    <h3 class="h6 mb-3">Bültene abone olun</h3>
+                    <form action="#" class="subscribe-form">
+                        <div class="form-group d-flex">
+                            <div class="icon"><span class="icon-paper-plane"></span></div>
+                            <input type="text" class="form-control" placeholder="Email Adresini Girin">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="footer">
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> Tüm hakları saklıdır | Bu şablon  <i class="icon-heart" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/mehmet-zahid-gorgec-896924254/" target="_blank" style="color:#00ffff">MZG </a>  ile yapılmıştır.
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5 pt-5">
+            @RenderBody()
+        </div>
+    </div>
+
+    @Html.Action("PartialScript","AdminLayout")
+</body>
+</html>
+

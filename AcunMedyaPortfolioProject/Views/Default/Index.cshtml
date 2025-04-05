@@ -1,0 +1,107 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@Html.Action("PartialHead", "Default")
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+            <a href="~/Default/Index" class="logo d-flex align-items-center">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1 class="sitename">MZG</h1>
+            </a>
+
+            @Html.Action("PartialMenu", "Default")
+
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- Hero Section -->
+        @Html.Action("PartialSlider", "Default")
+        <!-- /Hero Section -->
+        <!-- About Section -->
+        @Html.Action("PartialAbout", "Default")
+        <!-- /About Section -->
+        <!-- Skills Section -->
+        @Html.Action("PartialSkill", "Default")
+        <!-- /Skills Section -->
+        <!-- Resume Section -->
+        <section id="resume" class="resume section light-background">
+
+            <!-- Section Title -->
+            <section id="resume" class="resume section">
+                <div class="container section-title" data-aos="fade-up">
+                    <h2>Özgeçmiş</h2>
+                    <p></p>
+                </div><!-- End Section Title -->
+
+                <div class="container">
+
+                    <div class="row">
+
+                        @Html.Action("PartialEducation", "Default")
+
+                        @Html.Action("PartialJobs", "Default")
+
+                    </div>
+
+                </div>
+
+            </section><!-- /Resume Section -->
+            <!-- Services Section -->
+            @Html.Action("PartialServices", "Default")
+            <!-- /Services Section -->
+            <!-- Portfolio Section -->
+            @Html.Action("PartialProject", "Default")
+            <!-- /Portfolio Section -->
+            <!-- Testimonials Section -->
+            @Html.Action("PartialTestimonial", "Default")
+            
+            <!-- /Testimonials Section -->
+            <!-- Contact Section -->
+            <section id="contact" class="contact section">
+
+                <!-- Section Title -->
+                <div class="container section-title" data-aos="fade-up">
+                    <h2>İletişim</h2>
+                    <p>Benimle en hızlı şekilde iletişime geçmek için aşağıdaki iletişim bilgilerini kullanabilirsiniz.</p>
+                </div><!-- End Section Title -->
+
+                <div class="container" data-aos="fade" data-aos-delay="100">
+
+                    <div class="row gy-4">
+
+                        @Html.Action("PartialContact", "Default")
+
+
+                        @Html.Action("PartialMessage", "Default")
+                        <!-- End Contact Form -->
+
+                    </div>
+
+                </div>
+
+            </section><!-- /Contact Section -->
+        </section>
+
+    </main>
+
+
+
+    @Html.Action("PartialScript", "Default")
+
+</body>
+
+@Html.Action("PartialFooter", "Default")
+
+</html>

@@ -1,0 +1,48 @@
+﻿@model List<AcunMedyaPortfolioProject.Models.Tbl_Project>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Burası Projeler Sayfası</h2>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ProjeID</th>
+                <th>Proje İsimi</th>
+                <th>Açıklama</th>
+                <th>URL</th>
+                <th>Resim1</th>
+                <th>Resim2</th>
+                <th>Resim3</th>
+                <th>Kategori</th>
+                <th>Güncelle</th>
+                <th>Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ProjectID</td>
+                    <td>@item.ProjectName</td>
+                    <td>@item.Description</td>
+                    <td>@item.ProjectUrl</td>
+                    <td><img src="@item.Image1" style="width:50px" /></td>
+                    <td><img src="@item.Image2" style="width:50px" /></td>
+                    <td><img src="@item.Image3" style="width:50px" /></td>
+                    <td>@item.CategoryID</td>
+                    <td><a href="/Project/UpdateProject/@item.ProjectID" class="btn btn-info">Güncelle</a></td>
+                    <td><a href="/Project/DeleteProject/@item.ProjectID" class="btn btn-danger">Sil</a></td>
+                </tr>
+            }
+
+
+
+        </tbody>
+    </table>
+    <a href="/Project/CreateProject/" class="btn btn-success">Oluştur</a>
+</div>

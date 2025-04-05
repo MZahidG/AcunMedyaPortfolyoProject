@@ -1,0 +1,56 @@
+﻿@model List<AcunMedyaPortfolioProject.Models.Tbl_About>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Burası Hakkında Sayfası</h2>
+
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>About ID</th>
+                <th>Kategori Resimi</th>
+                <th>Başlık</th>
+                <th>Doğum Günü</th>
+                <th>Web Sitesi</th>
+                <th>Telefon</th>
+                <th>Şehir</th>
+                <th>Yaş</th>
+                <th>Mail</th>
+                <th>Freelance</th>
+                <th>Açıklama 1</th>
+                <th>Açıklama 2</th>
+                <th>Bölüm</th>
+                <th>Güncelle</th>
+                <th>Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @foreach (var item in Model)
+                { <
+                    <td>@item.AboutID</td>
+                    <td><img src="@item.ImageUrl" style="width:50px"/></td>
+                    <td>@item.Title</td>
+                    <td>@item.Birthday</td>
+                    <td>@item.WebSite</td>
+                    <td>@item.Phone</td>
+                    <td>@item.City</td>
+                    <td>@item.Age</td>
+                    <td>@item.Email</td>
+                    <td>@item.Freelance</td>
+                    <td>@item.Description1</td>
+                    <td>@item.Description2</td>
+                    <td>@item.Degree</td>
+                    <td><a href="/About/UpdateAbout/@item.AboutID" class="btn btn-info">Güncelle</a></td>
+                    <td><a href="/About/DeleteAbout/@item.AboutID" class="btn btn-danger">Sil</a></td>
+                }
+
+            </tr>
+        </tbody>
+    </table>
+    <a href="/About/CreateAbout/" class="btn btn-success">Oluştur</a>
+</div>

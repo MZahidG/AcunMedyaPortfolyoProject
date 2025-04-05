@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+
+}
+
+<h2>Burası Mesajlar Sayfası</h2>
+
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Message ID</th>
+                <th>İsim Soyisim</th>
+                <th>Mail</th>
+                <th>Konu</th>
+                <th>Mesaj</th>
+                <th>Güncelle</th>
+                <th>Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+               
+                <tr>
+                    <td>@item.MessageID</td>
+                    <td>@item.NameSurname</td>
+                    <td>@item.Mail</td>
+                    <td>@item.Subject</td>
+                    <td>@item.MessageContent</td>
+                    <td><a href="/Message/UpdateMessage/@item.MessageID" class="btn btn-info">Güncelle</a></td>
+                    <td><a href="/Message/DeleteMessage/@item.MessageID" class="btn btn-danger">Sil</a></td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+    <a href="/Message/CreateMessage/" class="btn btn-success">Oluştur</a>
+</div>
+
+
+
+
+

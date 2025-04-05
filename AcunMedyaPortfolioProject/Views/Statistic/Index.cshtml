@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>İstatistikler</h2>
+<br />
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 mb-3 d-flex align-items-stretch" >
+            <div class="card border-primary shadow-lg w-100"style=" border-radius: 25px;">
+                <div class="card-header bg-primary text-white" style=" border-radius: 75px;">KATEGORİLER</div>
+                <div class="card-body text-primary">
+                    <h5 class="card-title">Toplam Kategori Sayısı</h5>
+                    <p class="card-text fw-bold">@ViewBag.CategoryCount</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3 d-flex align-items-stretch">
+            <div class="card border-secondary shadow-lg w-100"style=" border-radius: 25px;">
+                <div class="card-header bg-secondary text-white"style=" border-radius: 75px;">PROJELER</div>
+                <div class="card-body text-secondary">
+                    <h5 class="card-title">Tamamlanan Proje Sayısı</h5>
+                    <p class="card-text fw-bold">@ViewBag.ProjectCount</p>
+                    <small class="text-muted">Son Proje: @ViewBag.LastProject</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3 d-flex align-items-stretch">
+            <div class="card border-info shadow-lg w-100"style=" border-radius: 25px;">
+                <div class="card-header bg-info text-white"style=" border-radius: 75px;">MESAJLAR</div>
+                <div class="card-body text-info">
+                    <h5 class="card-title">Toplam Gelen Mesaj</h5>
+                    <p class="card-text fw-bold">@ViewBag.MessageCount</p>
+                    <small class="text-muted">Son Mesaj: @ViewBag.LastMessage</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3 d-flex align-items-stretch">
+            <div class="card border-success shadow-lg w-100"style=" border-radius: 25px;">
+                <div class="card-header bg-success text-white"style=" border-radius: 75px;">DENEYİM</div>
+                <div class="card-body text-success">
+                    <h5 class="card-title">Deneyim Sayısı</h5>
+                    <p class="card-text fw-bold">@ViewBag.JobsCount</p>
+                    <small class="text-muted">Son Deneyim: @ViewBag.LastJob</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 mb-3 d-flex align-items-stretch">
+            <div class="card border-danger shadow-lg w-100"style=" border-radius: 25px;">
+                <div class="card-header bg-danger text-white"style=" border-radius: 75px;">EĞİTİM</div>
+                <div class="card-body text-danger">
+                    <h5 class="card-title">Eklenen Eğitim Sayısı</h5>
+                    <p class="card-text fw-bold">@ViewBag.EducationCount</p>
+                    <small class="text-muted">Son Eğitim: @ViewBag.LastEducation</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3 d-flex align-items-stretch">
+            <div class="card border-warning shadow-lg w-100"style=" border-radius: 25px;">
+                <div class="card-header bg-warning text-white"style=" border-radius: 75px;">HİZMETLER</div>
+                <div class="card-body text-warning">
+                    <h5 class="card-title">Toplam Hizmet Sayısı</h5>
+                    <p class="card-text fw-bold">@ViewBag.ServicesCount</p>
+                    <small class="text-muted">Son Hizmet: @ViewBag.LastService</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3 d-flex align-items-stretch">
+            <div class="card border-dark shadow-lg h-100"style=" border-radius: 25px;">
+                <div class="card-header bg-dark text-white"style=" border-radius: 75px;">YETENEKLER</div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title">Toplam Yetenek Sayısı</h5>
+                    <p class="card-text fw-bold">@ViewBag.SkillCount</p>
+                    <small class="text-muted text-truncate">Son Yetenek: @ViewBag.LastSkill</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3 d-flex align-items-stretch">
+            <div class="card border-secondary shadow-lg w-100"style=" border-radius: 25px;">
+                <div class="card-header bg-secondary text-white"style=" border-radius: 75px;">REFERANSLAR</div>
+                <div class="card-body text-secondary">
+                    <h5 class="card-title">Eklenen Referans Sayısı</h5>
+                    <p class="card-text fw-bold">@ViewBag.TestimonialCount</p>
+                    <small class="text-muted">Son Referans: @ViewBag.LastTestimonial</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

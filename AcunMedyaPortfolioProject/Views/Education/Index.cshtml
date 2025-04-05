@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Burası Eğitim Sayfası</h2>
+
+
+
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Education ID</th>
+                <th>Başlama Yılı</th>
+                <th>Bitirme Yılı</th>
+                <th>Okul Adı</th>
+                <th>Açıklama</th>
+                <th>Bölüm</th>
+                <th>Güncelle</th>
+                <th>Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+            @*for while do while foreach*@
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.EducationID</td>
+                    <td>@item.StartYear</td>
+                    <td>@item.EndYear</td>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@item.Section</td>
+                    <td><a href="/Education/UpdateEducation/@item.EducationID" class="btn btn-info">Güncelle</a></td>
+                    <td><a href="/Education/DeleteEducation/@item.EducationID" class="btn btn-danger">Sil</a></td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <a href="/Education/CreateEducation/" class="btn btn-success">Oluştur</a>
+
+</div>
+
+

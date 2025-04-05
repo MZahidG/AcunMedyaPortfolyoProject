@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "CreateProject";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Proje Oluşturma Sayfası</h2>
+
+
+<form method="post">
+    <label>Proje Adı</label>
+    <input type="text" class="form-control" name="ProjectName" /> <br />
+    <label>Proje Açıklaması</label>
+    <input type="text" class="form-control" name="Description" /> <br />
+    <label>Proje Linki</label>
+    <input type="text" class="form-control" name="ProjectLink" /> <br />
+    <label>Görsel-1</label>
+    <input type="text" class="form-control" name="Image1" /> <br />
+    <label>Görsel-2</label>
+    <input type="text" class="form-control" name="Image2" /> <br />
+    <label>Görsel-3</label>
+    <input type="text" class="form-control" name="Image-3" /> <br />
+    <label>Kategori ID</label>
+    <input type="text" class="form-control" name="CategoryID" /> <br />
+    <button class="btn btn-success">Ekle</button>
+</form>
