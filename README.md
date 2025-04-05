@@ -1,4 +1,4 @@
-Öne Çıkan Özellikler
+<h2> Öne Çıkan Özellikler <h2>
 ✅ CRUD İşlemleri – Verilerin eklenmesi, güncellenmesi, silinmesi ve listelenmesi
 
 ✅ Admin Paneli – İçerik yönetimini kolaylaştıran kullanıcı dostu arayüz
